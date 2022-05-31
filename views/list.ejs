@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To do List</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+    </script>
+  </head>
+  <body>
+
+    <div class="box" id="heading">
+      <h1 ><%= typeDay%></h1>
+    </div>
+    <div class="box">
+
+
+        <% for (var i = 0; i < array.length; i++) { %>
+  <div class="item">
+    <input type="checkbox">
+    <p><%=array[i]%></p>
+  </div>
+
+
+        <%}%>
+
+<div style="text-align: center">
+        <form class="item" action="/" method="post">
+          <input style="display:block" type="text" name="workItem" placeholder="Add today task" required autofocus>
+
+          <button style="display: block" type="submit" name="button">+</button>
+        </form>
+        <form class="item" action="/pop" method="post">
+
+
+            <button style="display: grid;margin: auto;"  type="submit" name="button">-</button>
+
+          </form>
+        </div>
+
+    </div>
+
+    <br>
+
+
+
+  </body>
+</html>
